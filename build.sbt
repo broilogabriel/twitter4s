@@ -1,6 +1,6 @@
-import com.typesafe.sbt.SbtGit.{GitKeys => git}
+//import com.typesafe.sbt.SbtGit.{GitKeys => git}
 
-enablePlugins(GhpagesPlugin, SiteScaladocPlugin)
+//enablePlugins(GhpagesPlugin, SiteScaladocPlugin)
 
 name := "twitter4s"
 version := "5.4"
@@ -68,7 +68,6 @@ lazy val standardSettings = Seq(
     if (version.value.trim.endsWith("SNAPSHOT")) Some(Opts.resolver.sonatypeSnapshots)
     else Some(Opts.resolver.sonatypeStaging)
   },
-  git.gitRemoteRepo := "git@github.com:DanielaSfregola/twitter4s.git",
   scalacOptions ++= Seq(
     "-encoding",
     "UTF-8",
@@ -99,10 +98,12 @@ lazy val coverageSettings = Seq(
 scalafmtOnCompile in ThisBuild := true
 scalafmtTestOnCompile in ThisBuild := true
 
-siteSubdirName in SiteScaladoc := version + "/api"
+//siteSubdirName in SiteScaladoc := version + "/api"
 
 lazy val root = (project in file("."))
   .settings(standardSettings ++ coverageSettings)
   .settings(
     name := "twitter4s"
   )
+
+//useJGit
