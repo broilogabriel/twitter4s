@@ -96,8 +96,8 @@ lazy val coverageSettings = Seq(
   coverageMinimum := 85
 )
 
-scalafmtOnCompile in ThisBuild := true
-scalafmtTestOnCompile in ThisBuild := true
+//scalafmtOnCompile in ThisBuild := true
+//scalafmtTestOnCompile in ThisBuild := true
 
 siteSubdirName in SiteScaladoc := version + "/api"
 
